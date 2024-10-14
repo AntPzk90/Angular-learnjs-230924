@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {productsMock} from '../../shared/products/products.mock';
+import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { productsMock } from '../../shared/products/products.mock'
 
 @Component({
     selector: 'app-products-list',
@@ -8,5 +8,5 @@ import {productsMock} from '../../shared/products/products.mock';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsListComponent {
-    readonly products = productsMock;
+    readonly products = productsMock
 }

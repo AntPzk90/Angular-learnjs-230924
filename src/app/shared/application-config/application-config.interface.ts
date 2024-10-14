@@ -1,4 +1,4 @@
 export interface ApplicationConfig {
-    title: string;
-    shopIconSrc: string;
+    title: string
+    shopIconSrc: string
 }

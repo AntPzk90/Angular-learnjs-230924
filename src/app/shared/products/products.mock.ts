@@ -1,4 +1,4 @@
-import {Product} from './product.interface';
+import { Product } from './product.interface'
 
 export const productsMock: Product[] = [
     {
@@ -324,4 +324,4 @@ export const productsMock: Product[] = [
         price: 81,
         rating: 4.4,
     },
-];
+]

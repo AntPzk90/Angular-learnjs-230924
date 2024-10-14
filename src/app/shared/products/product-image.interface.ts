@@ -1,4 +1,4 @@
 export interface ProductImage {
-    source: string;
-    url: string;
+    source: string
+    url: string
 }

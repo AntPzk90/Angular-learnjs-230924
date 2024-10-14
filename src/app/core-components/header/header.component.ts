@@ -6,8 +6,8 @@ import {
     OnChanges,
     Output,
     SimpleChanges,
-} from '@angular/core';
-import {ApplicationConfig} from '../../shared/application-config/application-config.interface';
+} from '@angular/core'
+import { ApplicationConfig } from '../../shared/application-config/application-config.interface'
 
 @Component({
     selector: 'app-header',
@@ -16,30 +16,30 @@ import {ApplicationConfig} from '../../shared/application-config/application-con
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnChanges {
-    @Input() applicationConfig: ApplicationConfig | undefined;
-    @Input() newStr: string | undefined;
+    @Input() applicationConfig: ApplicationConfig | undefined
+    @Input() newStr: string | undefined
 
-    @Output() menuClick = new EventEmitter<void>();
+    @Output() menuClick = new EventEmitter<void>()
 
-    ngOnChanges({applicationConfig, newStr}: SimpleChanges): void {
+    ngOnChanges({ applicationConfig, newStr }: SimpleChanges): void {
         if (applicationConfig) {
             // eslint-disable-next-line no-console
             console.log(
                 applicationConfig.previousValue,
                 applicationConfig.currentValue,
                 this.applicationConfig,
-                this.applicationConfig === applicationConfig.currentValue,
+                this.applicationConfig === applicationConfig.currentValue
                 // applicationConfig.firstChange,
-            );
+            )
         }
 
         if (newStr) {
             // eslint-disable-next-line no-console
-            console.log(newStr);
+            console.log(newStr)
         }
     }
 
     onClick() {
-        this.menuClick.emit();
+        this.menuClick.emit()
     }
 }
